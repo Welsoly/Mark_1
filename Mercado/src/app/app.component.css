@@ -1,11 +1,9 @@
-/* styles.css */
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
-
 .mat-toolbar {
   background-color: #007bff;
   color: #fff;
@@ -14,17 +12,13 @@ body {
   align-items: center;
   padding: 0 20px;
 }
-
 .mat-toolbar span {
   font-size: 40px;
-
 }
-
 .example-icon {
   color: #f50303;
   transition: color 0.2s;
 }
-
 .example-icon:hover {
   color: #bd4040;
 }

@@ -15,7 +15,4 @@ export class AppComponent {
       this.auth.logout()
       .then(()=>{
     this.router.navigate(['login'])
-    })
-
-  }
-}
+    })}}
