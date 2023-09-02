@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "supermarket-57344": {
+      "hosting": {
+        "Mercado": [
+          "supermarket-57344"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "supermarket-57344"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cadastro.component.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Produtos</h1>
+
+
+<div class="form">
+  <form [formGroup]="formProduct" (ngSubmit)="saveProduto()">
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Nome do Produto</mat-label>
+      <input formControlName="nome" matInput type="text">
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Quantidade</mat-label>
+      <input formControlName="qtde" matInput type="number">
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Preço</mat-label>
+      <input formControlName="preco" matInput type="text">
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit">Salvar</button>
+  </form>
+
+  <div class="list">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let p of crud.lista | async">
+        <a matLine><br><b>{{ p.nome }} ==></b> Quantidade: {{ p.qtde }} - Valor: R$ {{ p.preco }}</a>
+
+
+          <button  mat-icon-button (click)="edit(p)">
+            <mat-icon>edit</mat-icon>
+          </button>
+
+          <button  mat-icon-button (click)="deleteProduct(p.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+      </mat-list-item>
+
+    </mat-nav-list>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
